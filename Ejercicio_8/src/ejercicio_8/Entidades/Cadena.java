@@ -18,6 +18,17 @@ public class Cadena {
 
     public Cadena(String frase) {
         this.frase = frase;
+        this.longitud = frase.length();
+    }
+    
+    // Métodos
+
+    public String getFrase() {
+        return frase;
+    }
+
+    public int getLongitud() {
+        return longitud;
     }
     
     
