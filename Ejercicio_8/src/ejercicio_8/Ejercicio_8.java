@@ -4,6 +4,9 @@
  */
 package ejercicio_8;
 
+import ejercicio_8.Entidades.Cadena;
+import ejercicio_8.Servicio.servicioCadena;
+
 /**
  *
  * @author droa
@@ -16,8 +19,10 @@ public class Ejercicio_8 {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Clase Cadena");
-        
-        
+        servicioCadena sC = new servicioCadena();
+        Cadena cad1 = sC.crearCadena();
+        sC.mostrarVocales(cad1);
+        sC.invertirFrase(cad1);
     }
     
 }

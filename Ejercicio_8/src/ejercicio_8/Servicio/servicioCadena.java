@@ -22,8 +22,16 @@ public class servicioCadena {
     
     public void mostrarVocales(Cadena frase){
         int contador_vocales=0;
-        if(frase.getFrase().contains("a") || frase.getFrase().contains("e") || frase.getFrase().contains("i") || frase.getFrase().contains("o") || frase.getFrase().contains("u") ){
-            contador_vocales++;
+        CharSequence[] charBusqueda={"a","e","i","o","u"};
+        for(int i=0;i<charBusqueda.length;i++){
+            if(frase.getFrase().contains(charBusqueda[i])){
+                for(int j=0;j<frase.getLongitud();j++)
+                {
+                    if(frase.getFrase().substring(j, j+1).equals(charBusqueda[i])){
+                        contador_vocales++;
+                    }
+                }
+            }
         }
         System.out.println("Total Vocales en la frase es: "+contador_vocales);
     }
