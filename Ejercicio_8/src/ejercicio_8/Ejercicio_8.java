@@ -28,8 +28,18 @@ public class Ejercicio_8 {
         sC.invertirFrase(cad1);
         System.out.print("Ingrese caracter a Validar (Repetición): ");
         cad1.vecesRepetido(leer.next());
-        System.out.print("Ingres otra Frase: ");
+        System.out.print("Ingrese otra Frase: ");
         cad1.comprarLongitud(leer.next());
+        System.out.print("Ingrese otra Frase: ");
+        cad1.unirFrases(leer.next());
+        System.out.println("Ingrese una letra de reemplazo: ");
+        cad1.reemplazar(leer.next());
+        System.out.println("Ingrese una letra a buscar: ");
+        if (cad1.contiene(leer.next())){
+            System.out.println("VERDADERO: Encontrada en la Frase");
+        }else{
+            System.out.println("FALSO: No encontrada en la Frase");
+        }
     }
     
 }

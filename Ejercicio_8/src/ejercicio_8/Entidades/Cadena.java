@@ -58,4 +58,32 @@ public class Cadena {
         System.out.println("La Frase Ingresada tiene una longitud de "+ANSI_RED+Frase.length()+ANSI_RESET+" en comparación de la Frase Original, con una longitud de: "+ANSI_RED+this.frase.length()+ANSI_RESET+".");
     }
     
+    public void unirFrases(String Frase){
+        String concat = this.frase.concat(" "+Frase);
+        this.frase=concat;
+        //System.out.println(frase); //Para pruebas Solamente
+    }
+    public void reemplazar(String letra){
+        
+        CharSequence charBusqueda="a";
+        String fraseAux="";
+        for (int i=0;i<frase.length();i++){
+            if(frase.substring(i,i+1).equals(charBusqueda)){
+                fraseAux=frase.replace(charBusqueda, letra);
+                
+            }
+           
+        }
+        System.out.println("Frase Modificada: "+fraseAux);
+    }
+    
+    public boolean contiene(String letra){
+        boolean resultado=false;
+        char charBusqueda=letra.charAt(0);
+       
+        if (frase.contains(Character.toString(charBusqueda))) {
+            resultado=true;
+        }
+        return resultado;
+    }
 }
