@@ -14,6 +14,16 @@ public class Cadena {
     private String frase;
     private int longitud;
     
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+    
     // Contrusctores
 
     public Cadena(String frase) {
@@ -31,6 +41,21 @@ public class Cadena {
         return longitud;
     }
     
+    public void vecesRepetido(String letra){
+        int contador_caracter=0;
+        
+        char charBusqueda=letra.charAt(0);
+        for (int i=0;i<frase.length();i++){
+            if(frase.charAt(i)==charBusqueda){
+                contador_caracter++;
+            }
+        }
+        System.out.println("La letra '"+charBusqueda+"' aparece repetida "+contador_caracter+" veces.");
+    }
     
+    public void comprarLongitud(String Frase){
+        
+        System.out.println("La Frase Ingresada tiene una longitud de "+ANSI_RED+Frase.length()+ANSI_RESET+" en comparación de la Frase Original, con una longitud de: "+ANSI_RED+this.frase.length()+ANSI_RESET+".");
+    }
     
 }

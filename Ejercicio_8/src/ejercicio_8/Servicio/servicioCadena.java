@@ -5,6 +5,8 @@
 package ejercicio_8.Servicio;
 
 import ejercicio_8.Entidades.Cadena;
+import static ejercicio_8.Entidades.Cadena.ANSI_CYAN;
+import static ejercicio_8.Entidades.Cadena.ANSI_RESET;
 import java.util.Scanner;
 
 /**
@@ -33,7 +35,7 @@ public class servicioCadena {
                 }
             }
         }
-        System.out.println("Total Vocales en la frase es: "+contador_vocales);
+        System.out.println("Total Vocales en la frase es: "+ANSI_CYAN+contador_vocales+ANSI_RESET);
     }
     public void invertirFrase(Cadena frase){
         String soloFrase = frase.getFrase();
@@ -41,6 +43,7 @@ public class servicioCadena {
         for (int i=(soloFrase.length()-1);i >= 0;i--){
             stringAux+=soloFrase.charAt(i);
         }
-        System.out.println("Frase Invertida: "+stringAux);
+        System.out.println("Frase Invertida: "+ANSI_CYAN+stringAux+ANSI_RESET);
     }
+    
 }
